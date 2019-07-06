@@ -3,10 +3,156 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Arithmetics"        
+        xmlns:local="clr-namespace:Arithmetics"
         mc:Ignorable="d"
+        WindowStyle="None"
         WindowStartupLocation="CenterScreen"
-        Title="Arithmetics" Height="450" Width="800">
-    
+        Title="Arithmetics" Height="600" Width="1000" Background="#FF002300">
+    <Grid>
+        <Label Content="Arithmetics:" HorizontalAlignment="Left" Margin="51,8,0,0" VerticalAlignment="Top" 
+               Width="384" FontSize="48" FontWeight="Bold" FontFamily="Snap ITC" Height="72"/>
+
+
+        <Button Content="X" HorizontalAlignment="Left" Margin="934,6,0,0" VerticalAlignment="Top" 
+                Width="49" Height="45" FontSize="36" Background="#FFA50000" Click="Button_Click" FontWeight="Bold" FontFamily="Snap ITC"/>
+        <Label Content="+  -  x  /" HorizontalAlignment="Left" Margin="490,0,0,0" VerticalAlignment="Top" 
+            Width="415" FontSize="65" FontWeight="Bold" FontFamily="Snap ITC" Height="75"/>
+
+        <CheckBox Name="addCheck" HorizontalAlignment="Left" Margin="471,43,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Background="#FF868686" BorderBrush="#FF606060" IsChecked="True">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox x:Name="subCheck" HorizontalAlignment="Left" Margin="578,43,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Background="#FF868686" BorderBrush="#FF606060">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox x:Name="mulCheck" HorizontalAlignment="Left" Margin="658,43,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Background="#FF868686" BorderBrush="#FF606060">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox x:Name="divCheck" HorizontalAlignment="Left" Margin="770,43,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Background="#FF868686" BorderBrush="#FF606060">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+
+        <Label Content="+" HorizontalAlignment="Left" Margin="187,50,0,0" VerticalAlignment="Top" 
+            Width="45" FontSize="48" FontWeight="Bold" FontFamily="Snap ITC" Height="69"/>
+
+
+        <ComboBox SelectedIndex="2" Name="addBoxA"  HorizontalContentAlignment="Right"  RenderTransformOrigin="0.5,0.5" Margin="60,70,803.6,483.6" FontSize="24" FontWeight="Bold" Background="Black">
+            <ComboBoxItem Content="" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="#" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="##" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="###" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="####" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="#####" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="######" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="#######" HorizontalContentAlignment="Right"/>
+        </ComboBox>
+        <ComboBox SelectedIndex="2" Name="addBoxB" HorizontalContentAlignment="Left"  RenderTransformOrigin="0.5,0.5" Margin="235,70,628.6,483.6" FontSize="24" FontWeight="Bold" Background="Black">
+            <ComboBoxItem Content="" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="#" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="##" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="###" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="####" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="#####" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="######" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="#######" HorizontalContentAlignment="Left"/>
+        </ComboBox>
+        <Label Content="-" HorizontalAlignment="Left" Margin="195,96,0,0" VerticalAlignment="Top" 
+            Width="45" FontSize="48" FontWeight="Bold" FontFamily="Snap ITC" Height="69"/>
+        <ComboBox SelectedIndex="0" Name="subBoxA" HorizontalContentAlignment="Right"  RenderTransformOrigin="0.5,0.5" Margin="60,116,803.6,437.6" FontSize="24" FontWeight="Bold" Background="Black" IsEnabled="False">
+            <ComboBoxItem Content="" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="#" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="##" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="###" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="####" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="#####" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="######" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="#######" HorizontalContentAlignment="Right"/>
+        </ComboBox>
+        <ComboBox SelectedIndex="0" Name="subBoxB" HorizontalContentAlignment="Left"  RenderTransformOrigin="0.5,0.5" Margin="235,116,628.6,437.6" FontSize="24" FontWeight="Bold" Background="Black" IsEnabled="False">
+            <ComboBoxItem Content="" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="#" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="##" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="###" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="####" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="#####" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="######" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="#######" HorizontalContentAlignment="Left"/>
+        </ComboBox>
+        <Label Content="x" HorizontalAlignment="Left" Margin="187,143,0,0" VerticalAlignment="Top" 
+            Width="45" FontSize="48" FontWeight="Bold" FontFamily="Snap ITC" Height="69"/>
+        <ComboBox SelectedIndex="0" Name="mulBoxA" HorizontalContentAlignment="Right"  RenderTransformOrigin="0.5,0.5" Margin="60,163,803.6,390.6" FontSize="24" FontWeight="Bold" Background="Black" IsEnabled="False">
+            <ComboBoxItem Content="" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="#" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="##" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="###" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="####" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="#####" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="######" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="#######" HorizontalContentAlignment="Right"/>
+        </ComboBox>
+        <ComboBox SelectedIndex="0" Name="mulBoxB" HorizontalContentAlignment="Left"  RenderTransformOrigin="0.5,0.5" Margin="235,163,628.6,390.6" FontSize="24" FontWeight="Bold" Background="Black" IsEnabled="False">
+            <ComboBoxItem Content="" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="#" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="##" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="###" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="####" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="#####" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="######" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="#######" HorizontalContentAlignment="Left"/>
+        </ComboBox>
+        <Label Content="/" HorizontalAlignment="Left" Margin="191,189,0,0" VerticalAlignment="Top" 
+            Width="45" FontSize="48" FontWeight="Bold" FontFamily="Snap ITC" Height="69"/>
+        <ComboBox SelectedIndex="0" Name="divBoxA" HorizontalContentAlignment="Right"  RenderTransformOrigin="0.5,0.5" Margin="60,209,803.6,344.6" FontSize="24" FontWeight="Bold" Background="Black" IsEnabled="False">
+            <ComboBoxItem Content="" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="#" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="##" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="###" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="####" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="#####" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="######" HorizontalContentAlignment="Right"/>
+            <ComboBoxItem Content="#######" HorizontalContentAlignment="Right"/>
+        </ComboBox>
+        <ComboBox SelectedIndex="0" Name="divBoxB" HorizontalContentAlignment="Left"  RenderTransformOrigin="0.5,0.5" Margin="235,209,628.6,344.6" FontSize="24" FontWeight="Bold" Background="Black" IsEnabled="False">
+            <ComboBoxItem Content="" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="#" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="##" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="###" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="####" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="#####" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="######" HorizontalContentAlignment="Left"/>
+            <ComboBoxItem Content="#######" HorizontalContentAlignment="Left"/>
+        </ComboBox>
+
+
+
+    </Grid>
+
 
 </Window>

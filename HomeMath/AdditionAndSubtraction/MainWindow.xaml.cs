@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Arithmetics
+namespace AdditionAndSubtraction
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,11 +24,9 @@ namespace Arithmetics
         {
             InitializeComponent();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
         }
-
     }
 }
