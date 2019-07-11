@@ -28,7 +28,7 @@
             Width="145" FontSize="36" FontWeight="Bold" FontFamily="Snap ITC" Height="50"/>
 
         <Label Name="display_prob" Content="0 + 0 =" HorizontalContentAlignment="Right"  HorizontalAlignment="Left" VerticalAlignment="Top" 
-            Width="550" FontSize="48" FontWeight="Bold" FontFamily="Snap ITC" Height="70" BorderBrush="Black" Canvas.Left="244" Canvas.Top="68"/>
+            Width="550" FontSize="48" FontWeight="Bold" FontFamily="Snap ITC" Height="70" BorderBrush="Black" Canvas.Left="244" Canvas.Top="68" Background="Transparent" Foreground="#FFABADB3"/>
 
         <Label Name="timer" Content="00:00:00" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="15,109,0,0" VerticalAlignment="Top" 
             Width="240" FontSize="36" FontWeight="Bold" FontFamily="Snap ITC" Height="56" Foreground="#FF606060"/>
